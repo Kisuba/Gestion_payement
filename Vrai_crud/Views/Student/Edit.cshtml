@@ -1,0 +1,39 @@
+﻿@model Vrai_crud.Models.Student
+   
+@{
+    ViewData["Title"] = "Type utilisateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Modifier</h2>
+
+<h4>Type utilisateur</h4>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Fonction" class="control-label"></label>
+                <input asp-for="Fonction" class="form-control" required/>
+                <span asp-validation-for="Fonction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" required/>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-default">Liste</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@*  @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@

@@ -1,0 +1,40 @@
+﻿@model Vrai_crud.Models.Student
+
+@{
+    ViewData["Title"] = "Créer un utilisateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Utilisateur</h1>
+
+<h4>Type</h4>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Fonction" class="control-label"></label>
+                <input asp-for="Fonction" class="form-control" placeholder="fonction" required />
+                <span asp-validation-for="Fonction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" placeholder="description" required />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-default">Liste</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@*@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}*@

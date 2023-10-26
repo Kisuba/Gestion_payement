@@ -1,0 +1,35 @@
+﻿@model Vrai_crud.Models.Student
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Effacer</h1>
+
+<h3>Etes-vous sur d'effacer cette élement?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Fonction)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Fonction)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Effacer" class="btn btn-success" /> |
+        <a asp-action="Index" class="btn btn-default">Liste</a>
+    </form>
+</div>

@@ -1,0 +1,55 @@
+﻿@model Vrai_crud.Models.etudiant
+
+@{
+    ViewData["Title"] = "Payement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Payement</h1>
+
+<div>
+    <h4>Etudiant</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Matricule
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.matricule)
+        </dd>
+
+        <dt class="col-sm-2">
+            Noms
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.noms)
+        </dd>
+        <dt class="col-sm-2">
+            Photo
+        </dt>
+        <dd class="col-sm-10">
+            <img src="~/images/@Html.DisplayFor(model => model.photo)" style="width:72px; height: 72px; border-radius: 0px;" />
+        </dd>
+        
+        
+</dl>
+</div>
+<div class="row">
+    <div class="col-md-5">
+        <form asp-action="Payement">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label"></label>
+                <input type="number" asp-for="montant" class="form-control" name="montant" required />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Valider" class="btn btn-success" />
+               
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    
+    <a asp-action="Index" class="btn btn-primary">Retour à la liste</a>
+</div>

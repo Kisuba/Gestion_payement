@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+        <!-- Topbar -->
+        <!-- End of Topbar -->
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+            <!-- Page Heading -->
+            <!-- Content Row -->
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header"><b>Etudiants</b> </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Create","etudiant")'>
+                                        <i class="fas fa-user-graduate fa-2x"></i>
+                                        <p>Ajouter Etudiant</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Index","etudiant")'>
+                                        <i class="fas fa-user-friends fa-2x"></i>
+                                        <p>Listes des Etudiants</p>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <!-- Background Gradient Utilities -->
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header"><b>Utilisateurs</b> </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Create","Utilisateur")'>
+                                        <i class="fas fa-user-plus fa-2x"></i>
+                                        <p>Ajouter Utilisateur</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Index","Utilisateur")'>
+                                        <i class="fas fa-users fa-2x"></i>
+                                        <p>Listes des utilisateurs</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Index","Student")'>
+                                        <i class="fas fa-user-tie fa-2x"></i>
+                                        <p>Type des utilisateurs</p>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <!-- Background Gradient Utilities -->
+                    <div class="card shadow mb-4">
+
+                        <div class="card-header"><b>Payement</b> </div>
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Index","Payement")'>
+                                        <i class="fas fa-funnel-dollar fa-2x"></i>
+                                        <p>Payement des etudiants</p>
+                                    </a>
+                                </div>
+
+                                <div class="col-md-5 text-center">
+                                    <a href='@Url.Action("Index","Frais")'>
+                                        <i class="fas fa-user-friends fa-2x"></i>
+                                        <p>Frais  par facultés</p>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Content Row -->
+
+            <div class="row">
+
+                <!-- Area Chart -->
+                
+
+                <!-- Pie Chart -->
+                
+            </div>
+
+        </div>
+   
+    </div>
+
+</div>
+

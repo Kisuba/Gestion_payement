@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Vrai_crud.Models.Payement>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Liste de Payement</h1>
+
+
+<div class="card shadow mb-4">
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+
+                        <th>
+                            Matricule
+                        </th>
+                        <th>
+                            Noms
+                        </th>
+                        <th>
+                            Faculté
+                        </th>
+                        <th>
+                            Promotion
+                        </th>
+                        <th>
+                            Montant
+                        </th>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.matricule)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.noms)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.faculte)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.promotion)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.montant) $
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.datepaye)
+                            </td>
+                            <td>
+                                
+                                @Html.ActionLink("Total", "Details", new { id = item.id }, new { @class = "btn btn-secondary" })|
+                                @Html.ActionLink("List", "Liste_paye", new { matricule = item.matricule }, new { @class = "btn btn-warning" })|
+                                @Html.ActionLink("Reçu", "recu_payement", new { id = item.id }, new { @class = "btn btn-warning" })
+                                
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
